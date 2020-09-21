@@ -3,7 +3,7 @@ function! LpcUtilsInit()
     nmap <F5> <ESC>:!lpc_compile %<CR>
     nmap <F6> <ESC>:!lpc_update %<CR>
     nmap <F10> <ESC>:!lpc_test % 
-    nmap <F9> <ESC>:!cat log/debug.log <CR>
+    nmap <F9> <ESC>:!cat `echo "$PWD" \| sed -n -e "s/newtxii.*//"p`newtxii/log/debug.log <CR>
 
 endfunction
 
