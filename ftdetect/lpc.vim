@@ -12,7 +12,7 @@ endfunction
 
 function! LpcFileTypeDetect()
     let mypath = getcwd()
-    if stridx(mypath, "newtxii") != -1 || stridx(mypath, "logic")
+    if stridx(mypath, "newtxii") != -1 || stridx(mypath, "logic") != -1
         set filetype=lpc
         call LpcUtilsInit()
     endif
