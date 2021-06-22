@@ -7,6 +7,7 @@ function! LpcUtilsInit()
 
     " clang format
     nmap <C-L> :ClangFormat<CR>
+    command! -nargs=0 Format :ClangFormat
 
 endfunction
 
