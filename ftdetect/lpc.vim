@@ -5,8 +5,6 @@ function! LpcUtilsInit()
     nmap <F10> <ESC>:!lpc_test % 
     nmap <F9> <ESC>:!clear && cat `echo "$PWD" \| sed -n -e "s/newtxii.*//"p`newtxii/log/debug.log <CR>
 
-    " clang format
-    nmap <C-L> :ClangFormat<CR>
     command! -nargs=0 Format :ClangFormat
 
 endfunction
