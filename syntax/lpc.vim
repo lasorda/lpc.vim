@@ -124,7 +124,7 @@ syn keyword     lpcApplies      contained valid_asm valid_bind valid_compile_to_
 syn keyword     lpcApplies      contained inventory_accessible inventory_visible is_living parse_command_adjectiv_id_list parse_command_adjective_id_list parse_command_all_word parse_command_id_list parse_command_plural_id_list parse_command_prepos_list parse_command_users parse_get_environment parse_get_first_inventory parse_get_next_inventory parser_error_message
 
 
-" Nodule: Efuns {{{1
+" Nodule: Efuns {{{1{{{
 
 syn cluster	lpcEfunGroup	contains=lpc_efuns,lpcOldEfuns,lpcNewEfuns,lpcKeywdFunc
 
@@ -142,6 +142,7 @@ syn keyword     lpcOldEfuns     contained tail dump_socket_status
 
 " new efuns after v22 should be added here!
 syn keyword     lpcNewEfuns     contained socket_status
+syn keyword     lpcNewEfuns     contained FGetUser FSetUser FAddUser SetExpireVar GetExpireVar GetExpireVarAndReExpire DelExpireVar GetExpireVarTtl svnup is_inner sprintv print get_host_num log_file
 
 " LPC efuns list.
 " DEBUG efuns Not included.
@@ -169,13 +170,13 @@ syn keyword     lpc_efuns       contained tan tell_object tell_room terminal_col
 syn keyword     lpc_efuns       contained undefinedp unique_array unique_mapping upper_case uptime userp users
 syn keyword     lpc_efuns       contained values variables virtualp
 syn keyword     lpc_efuns       contained wizardp write write_buffer write_bytes write_file
-
+"}}}
 " Nodule: Constants {{{1
 
 " LPC Constants.
 " like keywords, constants are always highlighted, be careful to choose only
 " the constants we used to add to this list.
-syn keyword     lpcConstant     __ARCH__ __COMPILER__ __DIR__ __FILE__ __OPTIMIZATION__ __PORT__ __VERSION__ 
+syn keyword     lpcConstant     __ARCH__ __COMPILER__ __DIR__ __FILE__ __OPTIMIZATION__ __PORT__ __VERSION__ __LINE__ __FUNC__
 "       Defines in options.h are all predefined in LPC sources surrounding by
 "       two underscores. Do we need to include all of that?
 syn keyword     lpcConstant     __SAVE_EXTENSION__ __HEARTBEAT_INTERVAL__
